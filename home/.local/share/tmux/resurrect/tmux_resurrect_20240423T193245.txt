@@ -1,0 +1,5 @@
+pane	Main	1	0	:-	1	thegassyninja@fartz:~	:/home/thegassyninja	1	vim	:vim
+pane	Main	2	1	:*	1	thegassyninja@fartz:~	:/home/thegassyninja	1	bash	:
+window	Main	1	:vim	0	:-	cdfe,145x29,0,0,1	off
+window	Main	2	:bash	1	:*	cdff,145x29,0,0,2	:
+state	Main	

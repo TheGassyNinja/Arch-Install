@@ -1,0 +1,1 @@
+/home/thegassyninja/.irssi/scripts/nickcolor.pl

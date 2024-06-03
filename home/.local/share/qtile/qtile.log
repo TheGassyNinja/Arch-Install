@@ -1,0 +1,331 @@
+2024-04-17 20:44:18,225 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-05-19 19:21:53,066 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:21:56,040 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:09,050 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:14,206 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:15,080 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:15,295 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:15,908 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:16,554 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:17,130 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 19:22:50,489 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-05-19 19:26:32,135 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:32,137 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:35,940 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:35,941 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:40,968 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:40,969 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:41,384 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:41,384 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:41,613 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:41,614 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:41,795 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:41,796 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:45,690 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:45,691 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:46,312 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:46,313 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:46,603 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:46,604 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:46,794 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:46,795 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:46,983 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:46,984 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:26:55,601 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:26:55,602 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:27:00,092 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:27:00,093 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:27:00,657 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:27:00,658 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 19:27:00,892 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 131
+    ),
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
+2024-05-19 19:27:00,893 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
+2024-05-19 21:13:28,205 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
+2024-05-19 21:13:28,218 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-05-19 21:22:32,450 WARNING libqtile manager.py:grab_key():L481 Key spec duplicated, overriding previous: <Key (['mod4'], r)>
+2024-05-19 21:22:57,269 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 21:23:07,628 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 21:23:08,906 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 21:23:13,576 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 21:24:41,322 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
+2024-05-19 22:20:27,567 ERROR libqtile manager.py:spawn():L1262 couldn't find `tdrop`
+2024-05-21 19:19:40,146 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
+2024-05-21 19:19:40,161 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-05-22 13:25:26,639 ERROR libqtile loop.py:_handle_exception():L62 Exception in event loop:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 944, in f
+    self.core.flush()
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 898, in flush
+    self.conn.flush()
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/xcbq.py", line 613, in flush
+    return self.conn.flush()
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/xcffib/__init__.py", line 581, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.12/site-packages/xcffib/__init__.py", line 567, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2024-05-22 13:25:26,642 WARNING libqtile core.py:_xpoll():L368 Shutting down due to disconnection from X server
+2024-05-22 13:25:26,642 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
+2024-05-22 13:25:26,643 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
+2024-05-22 13:25:26,643 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
+2024-05-22 13:25:26,643 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
+2024-05-22 13:25:26,647 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-05-24 06:31:23,146 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
+2024-05-24 06:31:23,215 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate

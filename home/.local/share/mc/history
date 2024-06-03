@@ -1,0 +1,43 @@
+[input-def]
+0=*
+
+[inp:fishlink_cmd: Shell link to machine ]
+0=192.168.254.141
+1=192.168.254.21
+
+[inpmc.fm.mkdir]
+0=old-lap1
+1=Laptop-1
+2=05-31
+
+[cmdline]
+0=
+
+[Dir Hist New Right Panel]
+0=/home/thegassyninja/mnt/USB
+1=/home/thegassyninja/mnt/USB/05-31
+2=/home/thegassyninja/mnt/USB/05-31/Git
+
+[Dir Hist New Left Panel]
+0=/home/thegassyninja/mnt/USB
+1=/home/thegassyninja/mnt
+2=/home/thegassyninja
+
+[input2]
+0=/home/thegassyninja/.local/bin/Crons/
+1=/home/thegassyninja/Downloads/pron
+2=/home/thegassyninja/Downloads/
+3=/home/thegassyninja/
+4=/home/thegassyninja/mnt/Data3/old-lap1
+5=/home/thegassyninja/mnt/Data3/old-lap1/
+6=/home/thegassyninja/mnt/Laptop-1
+7=/home/thegassyninja/mnt/Laptop-1/
+8=/etc/xdg/eww
+9=/home/thegassyninja/.config/
+10=/home/thegassyninja/mnt/USB/pron
+11=/home/thegassyninja/mnt/USB/05-31/
+12=/home/thegassyninja/mnt/USB/05-31
+13=/home/thegassyninja/Projects/Arch-Install/.config
+14=/home/thegassyninja/Projects/Arch-Install/.config/Bars
+15=/home/thegassyninja/Projects/Arch-Install/.config/WMs
+16=/home/thegassyninja/Projects/Arch-Install/home

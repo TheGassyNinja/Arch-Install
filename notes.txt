@@ -1,0 +1,15 @@
+# Arch - Xorg install
+# Echo Script description and list default (vim fzf git ...) packages. (offer quit option) 
+# check for packages and install 
+
+# Git install script
+
+    # (Install pacman and AUR packges) (see package.txt and AUR.txt)
+        # Pick WM(s) and Emulator(s). ??? More Here ??? (use fzf)
+            # Hyprland/Wayland packages IF (qtile, Hyprland, Sway..etc)
+        #   
+    # Git clone repos 
+    # List repos and description (after cd ~/Git)
+    # Pick one or more (with fzf)
+    #
+# 

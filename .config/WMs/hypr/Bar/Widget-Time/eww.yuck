@@ -1,0 +1,16 @@
+(defvar show-calendar false)
+
+(defpoll time :interval "1s"
+  (let ((time (date "+%H:%M")))
+    (box :class "time-box" :orientation "vertical" :halign "center" :valign "start"
+      (button :onclick "eww update show-calendar=!show-calendar"
+        (label :text time :class "time-label"))
+      (if show-calendar
+        (box :class "calendar-box"
+          (let ((calendar (sh "cal --color=always | awk '{if(NR==1) print $0; if(NR==2) print $0; if(NR>2) printf \"%-21s\n\", $0}'")))
+            (label :text calendar :class "calendar-label")))))))
+
+(defwindow time-window
+  :monitor 0
+  :geometry (geometry :x "50%" :y "0" :anchor "center top" :width "auto" :height "auto")
+  (time))

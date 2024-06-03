@@ -1,0 +1,1 @@
+/home/thegassyninja/.irssi/scripts/tmux-nicklist-portable.pl

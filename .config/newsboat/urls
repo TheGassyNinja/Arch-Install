@@ -1,0 +1,28 @@
+#https://www.state.gov/rss-feed/department-press-briefings/feed/
+#https://www.state.gov/rss-feed/press-releases/feed/
+https://www.argyletx.com/RSSFeed.aspx?ModID=76&CID=All-0
+https://www.argyletx.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml
+https://www.gentoo.org/feeds/news.xml
+https://security.gentoo.org/glsa/feed.atom
+https://github.com/void-linux/void-packages/commits/master.atom
+https://github.com/void-linux/xbps/commits/master.atom
+https://voidlinux.org/atom.xml
+https://archlinux.org/feeds/news/
+https://archlinux.org/feeds/packages/x86_64/
+https://archlinux.org/feeds/packages/added/x86_64/
+https://archlinux.org/feeds/packages/removed/x86_64/
+# https://www.youtube.com/feeds/videos.xml?channel_id=
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBvc7pmUp9wiZIFOXEp1sCg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCV5mGxp-rtsGDAedDYnp7hA
+# https://www.youtube.com/feeds/videos.xml?channel_id=
+# https://www.youtube.com/feeds/videos.xml?channel_id=
+# https://www.youtube.com/feeds/videos.xml?channel_id=
+# https://www.youtube.com/feeds/videos.xml?channel_id=
+
+https://www.reddit.com/r/bash.rss "~REDDIT - r/BASH"
+https://www.reddit.com/r/unixporn.rss "~REDDIT - r/UnixPorn"
+https://www.reddit.com/r/wallpaper.rss "~REDDIT - r/WallPapers"
+
+

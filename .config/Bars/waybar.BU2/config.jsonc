@@ -1,0 +1,124 @@
+{
+    "layer": "top",
+    "position": "top",
+    //"mode": "dock",
+    "exclusive": "true",
+    "passthrough": "false",
+    "height": "20",
+    "gtk-layer-shell": true,
+
+    "modules-left": ["custom/launcher", "cpu", "memory", "disk"],
+    "modules-center": ["custom/weather", "clock", "pulseaudio" ],
+    "modules-right": ["custom/Terminal", "custom/updates",  "battery"],
+
+
+    
+    "clock": {
+        "format": " {:%a, %e %b, %H:%M %p }"
+    },
+    
+
+    "custom/launcher": {
+        "tootltip": false,
+        "format" : " 󰣇 ",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
+    },
+
+    "custom/Terminal": {
+        "tootltip": false,
+        "format" : " $TERM ",
+        "on-click": "kitty"
+    },
+
+    "custom-container": {
+        "exec": "echo",  // Placeholder command, as we just need the container
+        "interval": 60,
+        "format": "{}",
+        "tooltip": false,
+        "class": "custom-container"
+    },
+
+    "custom/weather": {
+        "exec": "~/.config/waybar/Scripts/get.weather.sh",
+        "interval": 60,
+        "format": "{}°F",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format" : "C: {usage}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 1,
+        "format": "R: {percentage}%",
+        "max-length": 10
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "D: {percentage_used}%",
+        "path": "/home",
+        "on-click": "notify-send \"$(df -h / | awk '{print $1 \" - \" $5}' && df -h | grep home | awk '{print $1 \" - \" $5}')\"",
+    },
+
+    "custom/updates":{
+        "format": "  {} ",
+        "exec": "checkupdates | wc -l",
+        //"exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
+        "interval": 15,
+        "on-click": "kitty --class FLOATERM -e yay -Syu && notify-send 'The system has been updated' "
+    },
+
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+        "battery": {
+            "format": "{capacity}% {icon}",
+            "format-icons": ["", "", "", "", ""],
+            "states": {
+                "good": 50,
+                "warning": 20,
+                "critical": 10
+            },
+            "on-click": "kitty sh -c \"bpytop\"",
+            "class": {
+                "capacity": [
+                    { "min": 0, "max": 10, "class": "battery-critical" },
+                    { "min": 11, "max": 20, "class": "battery-low" },
+                    { "min": 21, "max": 50, "class": "battery-medium" },
+                    { "min": 51, "max": 100, "class": "battery-full" }
+                ]
+            }
+        },
+    
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
+
+    "custom/divider": {
+        "format": "|"
+    }
+}
