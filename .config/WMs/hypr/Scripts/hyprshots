@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define the options for the wofi menu
+options=("Full Screen" "Current Window" "Selection")
+
+# Prompt the user to select an option using wofi
+selected_option=$(printf '%s\n' "${options[@]}" | wofi --dmenu)
+
+case $selected_option in
+    "Full Screen")
+        grimblast --wait 1 save screen 
+        ;;
+    "Current Window")
+        grimblast --wait 1 save active
+        ;;
+    "Selection")
+        grimblast save area
+        ;;
+    *)
+        echo "Invalid option selected"
+        ;;
+esac

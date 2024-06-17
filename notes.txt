@@ -12,4 +12,7 @@
     # List repos and description (after cd ~/Git)
     # Pick one or more (with fzf)
     #
-# 
+#
+
+# Start services (SSH CRON)
+    # Add default crontabs

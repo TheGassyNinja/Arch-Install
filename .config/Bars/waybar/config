@@ -6,17 +6,36 @@
 	"margin-top": 7,
 	"margin-left": 12,
 	"margin-right": 12,
-	"margin-bottom": 0,
+	"margin-bottom": 6,
 	"modules-left": [
+		"custom/menu",
+		"custom/space",
+		"custom/sshot",
 		"group/hardware",
+		"custom/space",
+	],
+	"modules-center": [
+		"clock",
+		"custom/space",
+		"custom/weather",
+		"custom/space",
+		"custom/space",
+		"custom/weather2"
+	],
+	"modules-right": [
+		"custom/space",
+		"custom/space",
+		"pulseaudio",
+		"custom/space",
+		"custom/eq-select",
 		"custom/space",
 		"network",
 		"custom/space",
-	],
-	"modules-right": [
-		"clock",
+		"battery",
 		"custom/space",
-		"battery"
+		"custom/space",
+		"custom/power",
+		"custom/space"
 	],
 	
 
@@ -29,23 +48,7 @@
 			"custom/memicon1",
 			"memory",
 			"custom/space",
-			"pulseaudio",
-			"custom/space"
 		]
-	},
-	"group/wireless": {
-		"orientation": "horizontal",
-		"modules": [
-			"bluetooth",
-			"custom/space",
-			"network"
-		]
-	},
-	"custom/workspaces": {
-		"exec": "/home/thegassyninja/.config/waybar/w2.sh",
-		"interval": 1,
-		"tooltip": false,
-		"tooltip-format": "Workspaces"
 	},
 	"custom/cpuicon": {
 		"format": "  ",
@@ -67,8 +70,31 @@
 		"format": "",
 		"tooltip": false
 	},
+	"custom/eq-select": {
+		"format": {},
+		"exec": "echo '󰺢'",
+		"on-click": "/home/thegassyninja/.local/bin/Bar-Scripts/eq.changer.sh",
+	},
+	"custom/sshot": {
+		"format": {},
+		"exec": "echo '󰄄'",
+		"on-click": "/home/thegassyninja/.config/hypr/Scripts/hyprshots",
+	},
+	"custom/menu": {
+		//"format": ".",
+		"format": " ",
+		"on-click": "wofi --show drun",
+		"on-click-right": "kill $(pidof wofi)",
+		"tooltip": false
+	},
+	"custom/power": {
+		//"format": ".",
+		"format": " ",
+		"on-click": "wlogout",
+		"tooltip": false
+	},
 	"clock": {
-		"format": "{:%d-%m-%Y  %H:%M}",
+		"format": "{:%H:%M}",
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"mode": "month",
@@ -77,12 +103,24 @@
 				"days": "<span color='#eeeeee'><b>{}</b></span>",
 				"weeks": "<span color='#eeeeee'><b>W{}</b></span>",
 				"weekdays": "<span color='#eeeeee'><b>{}</b></span>",
-				"today": "<span color='#175b70'><b>{}</b></span>"
+				"today": "<span color='#ede051'><b>{}</b></span>"
 			}
 		}
 	},
+    "custom/weather": {
+        "exec": "~/.local/bin/Bar-Scripts/get.weather.sh",
+        "interval": 60,
+        "format": "{}°F",
+        "tooltip": false
+    },
+    "custom/weather2": {
+        "exec": "~/.local/bin/Bar-Scripts/get.weather2.sh",
+        "interval": 60,
+        "format": "{}",
+        "tooltip": false
+    },
 	"pulseaudio": {
-		"format": " {icon} {volume:2}%",
+		"format": " {icon} {volume:2}% ",
 		"format-bluetooth": "{icon}  {volume}%",
 		"format-source": " {volume}%",
 		"format-muted": "MUTE",
@@ -98,23 +136,13 @@
 		"on-click-right": "pamixer -t",
 		"ignored-sinks": ["Easy Effects Sink"]
 	},
-	"memory": {
-		"interval": 5,
-		"format": "{}%"
-	},
-	"cpu": {
-		"interval": 5,
-		"on-click": "emacsclient -c -e '(proced)'",
-		"format": "{usage:2}%"
-	},
 	"battery": {
 		"states": {
 			"good": 95,
 			"warning": 30,
 			"critical": 15
 		},
-		"on-click": "wlogout",
-		"format": "{icon} {capacity}% ",
+		"format": "{icon} {capacity}%",
 		"format-icons": [
 			"",
 			"",
@@ -129,12 +157,12 @@
 	"network": {
 		//󰮯󰧵
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
-		"format-wifi": " {essid}",
-		"format-ethernet": "{ipaddr}/{cidr}  ",
-		"tooltip-format": "{ifname} via {gwaddr}\n                   {signalStrength}% ",
+		"format-wifi": " ",
+		"format-ethernet": "󰩠",
+		"tooltip-format": "          {ifname}\nTx: {bandwidthUpBytes} - Rx: {bandwidthDownBytes}\n\n Local:    {ipaddr}\n Gateway:  {gwaddr}\n\n             {signalStrength}% ",
 		"format-linked": "{ifname} (No IP)  ",
-		"format-disconnected": "  ",
+		"format-disconnected": "",
 		//"format-alt": "{ifname}: {ipaddr}/{cidr}",
-		"on-click": "nmcli dev wifi rescan; hyprctl notify 5 1500 'rgb(d3c6aa)' 'Wifi rescan!'"
+		"on-click": "/home/thegassyninja/.local/bin/Bar-Scripts/wi-fi.sh" 
 	},
 }

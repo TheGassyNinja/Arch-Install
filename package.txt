@@ -4,6 +4,7 @@
 #bpytop
 #cmake
 #copyq
+#cronie
 #deluge-gtk
 #dunst
 #easyeffects
@@ -11,9 +12,10 @@
 #exa
 #expac
 #fd
-figlet
-jq
-kitty
+#figlet
+#fzf
+#jq
+#kitty
 #libnotify
 #lolcat
 #lxappearance-gtk3
@@ -36,11 +38,10 @@ kitty
 #ttf-hack-nerd
 #ttf-nerd-fonts-symbols
 #ttf-jetbrains-mono-nerd
-#ueberzug
 #vlc
 #xorg-server
 #xorg-xinit
 #xorg-xset
 #xorg-xsetroot
 #zsh
-#github-cli 
+#github-cli
