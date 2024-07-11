@@ -30,7 +30,7 @@
 #pacman-contrib
 #pamixer
 #pavucontrol
-#python-pywal
+# #python-pywal # Use pywal16(AUR)
 #ripgrep
 #rofi
 #speedtest-cli
