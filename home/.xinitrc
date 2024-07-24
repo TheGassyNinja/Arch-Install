@@ -70,20 +70,23 @@ fi
 #	 picom & 
 #fi  
 
-#~/.fehbg &
+~/.fehbg &
 
 touch $HOME/.dbus/Xdbus
 chmod 600 $HOME/.dbus/Xdbus
 env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
 echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
 
+systemctl --user import-environment DISPLAY XAUTHORITY
+
 if which dbus-update-activation-environment >/dev/null 2>&1; then
         dbus-update-activation-environment DISPLAY XAUTHORITY
 fi
-systemctl --user import-environment DISPLAY XAUTHORITY
 
 playerctld daemon
-# ~/.local/bin/crons/spot.now.listen.sh &
+
+# Startx:
+
 exec qtile start
 #exec spectrwm
 #exec awesome

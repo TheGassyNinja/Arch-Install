@@ -1,8 +1,11 @@
 [stream-properties]
-Audio/Sink:application.id:com.github.wwmm.easyeffects={"volume":1.000000, "channelMap":["FL", "FR"], "mute":false, "channelVolumes":[1.000000, 1.000000]}
-Audio/Sink:node.name:auto_null={"volume":1.000000, "channelMap":["FL", "FR"], "mute":false, "channelVolumes":[1.000000, 1.000000]}
+Audio/Sink:application.id:com.github.wwmm.easyeffects={"volume":1.000000, "mute":false, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000]}
+Audio/Sink:node.name:auto_null={"volume":1.000000, "mute":false, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000]}
 Audio/Source/Virtual:application.id:com.github.wwmm.easyeffects={"volume":1.000000, "channelMap":["FL", "FR"], "mute":false, "channelVolumes":[1.000000, 1.000000]}
-Input/Audio:application.id:org.PulseAudio.pavucontrol={"volume":1.000000, "channelMap":["MONO"], "mute":false, "channelVolumes":[1.000000]}
-Output/Audio:application.name:Firefox={"volume":1.000000, "channelMap":["FL", "FR"], "target":"easyeffects_sink", "mute":false, "channelVolumes":[1.000000, 1.000000]}
-Output/Audio:media.role:Movie={"volume":1.000000, "channelMap":["FL", "FR"], "channelVolumes":[0.216007, 0.216007], "mute":false}
-Output/Audio:media.role:Music={"volume":1.000000, "channelMap":["FL", "FR"], "mute":false, "channelVolumes":[1.000000, 1.000000]}
+Input/Audio:application.id:org.PulseAudio.pavucontrol={"volume":1.000000, "mute":false, "channelVolumes":[1.000000], "channelMap":["MONO"]}
+Input/Audio:media.role:Music={"channelMap":["FL", "FR", "RL", "RR", "FC", "LFE"], "volume":1.000000, "channelVolumes":[1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000], "mute":false}
+Input/Audio:media.role:Production={"channelVolumes":[1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000], "mute":false, "channelMap":["FL", "FR", "FC", "LFE", "RL", "RR"], "volume":1.000000}
+Output/Audio:application.name:Firefox={"channelVolumes":[0.527123, 0.527123], "target":"easyeffects_sink", "mute":false, "volume":1.000000, "channelMap":["FL", "FR"]}
+Output/Audio:media.role:Movie={"channelVolumes":[0.015625, 0.015625], "target":"easyeffects_sink", "mute":false, "volume":1.000000, "channelMap":["FL", "FR"]}
+Output/Audio:media.role:Music={"channelVolumes":[1.000000, 1.000000], "target":"easyeffects_sink", "mute":false, "volume":1.000000, "channelMap":["FL", "FR"]}
+Output/Audio:media.role:Notification={"channelMap":["FL", "FR"], "volume":1.000000, "channelVolumes":[1.000000, 1.000000], "mute":false}

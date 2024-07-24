@@ -1,0 +1,310 @@
+; 0-100%
+; l-1,   l-2,   l-3,     l-4,   center,   r-1,     r-2,       r-3,      r-4
+; 0/14, 14/14, 28/9.5,  37.5/7, 45/10,   55.5/7  62.5/9.5    72/14     86/14
+; 14 14 9.5 7 10 7 9.5 14 14 = 99
+; 0 14 28 37.5 45 55.5 62.5 72 86 = 100
+; 
+[bar/bottom]
+background = #66002b36
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=12:weight=ExtraBold;3
+modules-left = volume
+modules-center = b-artist b-track
+modules-right = b-date b-weather
+
+
+offset-y = 8px
+offset-x = 2.5%
+width = 95%
+height = 26pt
+bottom = true
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+radius-top-left = 10
+radius-top-right = 10
+radius-bottom-left = 10
+radius-bottom-right = 10
+border-size = 3pt
+border-color = ${colors.background}
+
+
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+
+
+
+
+[bar/l-1]
+modules-center = memory cpu
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=16:weight=ExtraBold;2
+
+offset-x = 0%
+width = 14%
+height = 32pt
+radius-top-left = 10
+radius-top-right = 44
+radius-bottom-left = 44
+radius-bottom-right = 10
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+[bar/l-2]
+modules-center = artist track
+background = ${colors.background-alt}
+foreground = ${colors.background}
+
+font-0 = JetBrainsMono NF:size=12:weight=ExtraBold;2
+font-1 = JetBrainsMono NF:size=10:weight=ExtraBold;-5
+font-2 = JetBrainsMono NF:size=8:weight=ExtraBold;10
+
+offset-x = 14%
+width = 14%
+height = 32pt
+radius-top-left = 10
+radius-top-right = 44
+radius-bottom-left = 44
+radius-bottom-right = 10
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+[bar/l-3]
+modules-center = pulseaudio
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=16:weight=ExtraBold;2
+
+offset-x = 28%
+width = 9.5%
+height = 32pt
+radius-top-left = 10
+radius-top-right = 44
+radius-bottom-left = 44
+radius-bottom-right = 10
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+[bar/l-4]
+modules-center = dnspeed
+background = ${colors.background-alt}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=10:weight=ExtraBold;2
+
+offset-x = 37.5%
+width = 7%
+height = 32pt
+radius-top-left = 10
+radius-top-right = 10
+radius-bottom-left = 44
+radius-bottom-right = 10
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+[bar/center]
+modules-center = date
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=22:weight=ExtraBold;6
+
+offset-x = 45%
+width = 10%
+height = 32pt
+radius-top-left = 10
+radius-top-right = 10
+radius-bottom-left = 10
+radius-bottom-right = 10
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+
+[bar/r-1]
+modules-center = upspeed
+background = ${colors.background-alt}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=10:weight=ExtraBold;2
+
+offset-x = 55.5%
+width = 7%
+height = 32pt
+radius-top-left = 10
+radius-top-right = 10
+radius-bottom-left = 10
+radius-bottom-right = 44
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+[bar/r-2]
+modules-center = weather 
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=16:weight=ExtraBold;2
+
+offset-x = 62.5%
+width = 9.5%
+height = 32pt
+radius-top-left = 44
+radius-top-right = 10
+radius-bottom-left = 10
+radius-bottom-right = 44
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+[bar/r-3]
+modules-center = nfs wlan eq 
+background = ${colors.background-alt}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=16:weight=ExtraBold;2
+
+offset-x = 72%
+width = 14%
+height = 32pt
+radius-top-left = 44
+radius-top-right = 10
+radius-bottom-left = 10
+radius-bottom-right = 44
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 2
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm
+
+[bar/r-4]
+modules-center = pacman-updates battery powermenu 
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = JetBrainsMono NF:size=16:weight=ExtraBold;2
+
+offset-x = 86%
+width = 14%
+height = 32pt
+radius-top-left = 44
+radius-top-right = 10
+radius-bottom-left = 10
+radius-bottom-right = 44
+border-size = 4pt
+border-color = #00ff0000
+
+padding-left = 0px
+padding-right = 0px
+module-margin = 1
+
+line-size = 12pt
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+
+wm-restack = bspwm

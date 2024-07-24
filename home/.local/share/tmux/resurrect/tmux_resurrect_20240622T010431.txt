@@ -1,0 +1,10 @@
+pane	Main	1	0	:-	1	thegassyninja@fartz:~/.local	:/home/thegassyninja/.local	1	bash	:
+pane	Main	1	0	:-	2	thegassyninja@fartz:~/.local/tmp	:/home/thegassyninja/.local/tmp	0	bash	:
+pane	Main	1	0	:-	3	thegassyninja@fartz:~/.local/bin/Crons	:/home/thegassyninja/.local/bin/Crons	0	bash	:
+pane	Main	2	0	:	1	thegassyninja@fartz:~/.local/bin/Crons	:/home/thegassyninja/.local/bin/Crons	0	bash	:
+pane	Main	2	0	:	2	thegassyninja@fartz:~	:/home/thegassyninja	1	bash	:
+pane	Main	3	1	:*	1	thegassyninja@fartz:~	:/home/thegassyninja	1	cmatrix	:cmatrix
+window	Main	1	:vim	0	:-	58de,145x29,0,0{72x29,0,0,1,72x29,73,0[72x14,73,0,2,72x14,73,15,3]}	off
+window	Main	2	:bash	0	:	8a95,145x29,0,0[145x8,0,0,4,145x20,0,9,5]	:
+window	Main	3	:cmatrix	1	:*	ce03,145x29,0,0,6	:
+state	Main	

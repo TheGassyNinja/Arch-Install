@@ -1,0 +1,38 @@
+#!/bin/bash
+# Default Settings 
+
+#    gaps_in = 7
+#    gaps_out = 10
+#    border_size = 6
+#    col.active_border = rgba(33ccff54) rgba(33ccff54)  rgba(595959A8) rgba(595959A8) rgba(33ccff54) rgba(33ccff54) rgba(595959A8)  rgba(595959A8) 45deg 
+#    col.inactive_border = rgba(595959A8) #595959 aa 
+#  echo -e "\n\n      :: General Settings ::  - ['$1']\n             ------------------------\n"
+
+
+
+#
+#if [[ "$1" == "default" ]]; then
+#    hyprctl --batch "\
+#        keyword general:border_size 6;\
+#        keyword general:gaps_out 10;\
+#        keyword general:gaps_in 7;"
+#fi
+#
+#if [[ "$1" == "small" ]]; then
+#    hyprctl --batch "\
+#        keyword general:border_size 4;\
+#        keyword general:gaps_out 5;\
+#        keyword general:gaps_in 3;"
+#fi
+#
+#if [[ "$1" == "big" ]]; then
+#    hyprctl --batch "\
+#        keyword general:border_size 6;\
+#        keyword general:gaps_out 25;\
+#        keyword general:gaps_in 23;"
+#fi
+
+
+
+
+

@@ -1,0 +1,98 @@
+System:
+  Kernel: 6.9.10-arch1-1 arch: x86_64 bits: 64 compiler: gcc v: 14.1.1
+    clocksource: tsc
+  Desktop: Qtile v: 0.27.1.dev0+g17cc04b3.d20240714 vt: 1 dm: startx
+    Distro: Arch Linux
+Machine:
+  Type: Laptop System: HP product: HP Laptop 17-bs1xx v: Type1ProductConfigId
+    serial: <superuser required> Chassis: type: 10 serial: <superuser required>
+  Mobo: HP model: 8408 v: 49.59 serial: <superuser required>
+    part-nu: 2PB31UAR#ABA uuid: <superuser required> UEFI: Insyde v: F.14
+    date: 10/16/2017
+Battery:
+  ID-1: BAT0 charge: 29.5 Wh (73.6%) condition: 40.1/40.1 Wh (100.0%)
+    volts: 15.1 min: 14.6 model: 133-42-6E-A JC04041 type: Li-ion
+    serial: <filter> status: not charging
+  Device-1: hidpp_battery_0 model: Logitech K350 serial: <filter>
+    charge: 70% (should be ignored) rechargeable: yes status: discharging
+  Device-2: hidpp_battery_1 model: Logitech Marathon Mouse/Performance Plus
+    M705 serial: <filter> charge: 55% (should be ignored) rechargeable: yes
+    status: discharging
+CPU:
+  Info: quad core model: Intel Core i5-8250U bits: 64 type: MT MCP
+    smt: enabled arch: Coffee Lake rev: A cache: L1: 256 KiB L2: 1024 KiB
+    L3: 6 MiB
+  Speed (MHz): avg: 500 high: 800 min/max: 400/3400 cores: 1: 400 2: 400
+    3: 800 4: 800 5: 400 6: 400 7: 400 8: 400 bogomips: 28808
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx
+Graphics:
+  Device-1: Intel UHD Graphics 620 vendor: Hewlett-Packard driver: i915
+    v: kernel arch: Gen-9.5 ports: active: HDMI-A-1 off: eDP-1 empty: none
+    bus-ID: 00:02.0 chip-ID: 8086:5917 class-ID: 0300
+  Device-2: AMD Topaz XT [Radeon R7 M260/M265 / M340/M360 M440/M445 530/535
+    620/625 Mobile] vendor: Hewlett-Packard driver: amdgpu v: kernel
+    arch: GCN-3 pcie: speed: 2.5 GT/s lanes: 2 bus-ID: 01:00.0
+    chip-ID: 1002:6900 class-ID: 0380 temp: 58.0 C
+  Device-3: Chicony HP TrueVision HD Camera driver: uvcvideo type: USB
+    rev: 2.0 speed: 480 Mb/s lanes: 1 bus-ID: 1-7:6 chip-ID: 04f2:b5d5
+    class-ID: 0e02 serial: <filter>
+  Display: unspecified server: X.org v: 1.21.1.13 with: Xwayland v: 24.1.1
+    compositors: 1: Picom v: git-5b517 2: Qtile
+    v: 0.27.1.dev0+g17cc04b3.d20240714 driver: X: loaded: amdgpu,modesetting
+    unloaded: radeon alternate: fbdev,intel,vesa dri: iris,radeonsi gpu: i915
+    display-ID: :0 screens: 1
+  Screen-1: 0 s-res: 1920x1080 s-size: <missing: xdpyinfo>
+  Monitor-1: HDMI-A-1 mapped: HDMI-1 pos: primary model: Sharp LC-50LB601U
+    serial: <filter> res: 1920x1080 hz: 60 dpi: 45
+    size: 1095x616mm (43.11x24.25") diag: 1271mm (50.1") modes: max: 1920x1080
+    min: 720x400
+  Monitor-2: eDP-1 note: disabled model: AU Optronics 0x229e res: 1920x1080
+    dpi: 106 size: 382x214mm (15.04x8.43") diag: 438mm (17.2") modes: 1600x900
+  API: OpenGL Message: Unable to show GL data. glxinfo is missing.
+Audio:
+  Device-1: Intel Sunrise Point-LP HD Audio vendor: Hewlett-Packard
+    driver: snd_hda_intel v: kernel bus-ID: 00:1f.3 chip-ID: 8086:9d71
+    class-ID: 0403
+  API: ALSA v: k6.9.10-arch1-1 status: kernel-api
+  Server-1: sndiod v: N/A status: off
+  Server-2: PipeWire v: 1.2.1 status: active with: 1: pipewire-pulse
+    status: active 2: wireplumber status: active 3: pipewire-alsa type: plugin
+    4: pw-jack type: plugin
+Network:
+  Device-1: Realtek RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet
+    vendor: Hewlett-Packard driver: r8169 v: kernel pcie: speed: 2.5 GT/s
+    lanes: 1 port: 3000 bus-ID: 02:00.0 chip-ID: 10ec:8168 class-ID: 0200
+  IF: eno1 state: up speed: 1000 Mbps duplex: full mac: <filter>
+  Device-2: Intel Dual Band Wireless-AC 3168NGW [Stone Peak] driver: iwlwifi
+    v: kernel pcie: speed: 2.5 GT/s lanes: 1 bus-ID: 03:00.0 chip-ID: 8086:24fb
+    class-ID: 0280
+  IF: wlo1 state: up mac: <filter>
+Bluetooth:
+  Device-1: N/A driver: btusb v: 0.8 type: USB rev: 2.0 speed: 12 Mb/s
+    lanes: 1 bus-ID: 1-5:4 chip-ID: 8087:0aa7 class-ID: e001
+  Report: rfkill ID: hci0 rfk-id: 0 state: down bt-service: not found
+    rfk-block: hardware: no software: no address: see --recommends
+Drives:
+  Local Storage: total: 1.84 TiB used: 84.02 GiB (4.5%)
+  ID-1: /dev/sda vendor: Kingfast model: N/A size: 953.87 GiB
+    speed: 6.0 Gb/s tech: SSD serial: <filter> fw-rev: 9B0 scheme: GPT
+  ID-2: /dev/sdb vendor: Seagate model: Backup+ BK size: 931.51 GiB
+    type: USB rev: 2.1 spd: 480 Mb/s lanes: 1 tech: N/A serial: <filter>
+    fw-rev: 0836 scheme: GPT
+Partition:
+  ID-1: / size: 936.84 GiB used: 16.14 GiB (1.7%) fs: ext4 dev: /dev/sda2
+  ID-2: /boot size: 1022 MiB used: 76.1 MiB (7.4%) fs: vfat dev: /dev/sda1
+Swap:
+  ID-1: swap-1 type: zram size: 4 GiB used: 256 KiB (0.0%) priority: 100
+    dev: /dev/zram0
+Sensors:
+  System Temperatures: cpu: 61.0 C pch: 57.5 C mobo: N/A gpu: amdgpu
+    temp: 58.0 C
+  Fan Speeds (rpm): N/A
+Info:
+  Memory: total: 12 GiB available: 11.56 GiB used: 4.55 GiB (39.3%)
+  Processes: 234 Power: uptime: 1d 4h 46m states: freeze,mem,disk
+    suspend: deep wakeups: 0 hibernate: platform Init: systemd v: 256
+    default: graphical
+  Packages: pm: pacman pkgs: 843 Compilers: gcc: 14.1.1 Shell: status.sh
+    default: Bash v: 5.2.26 running-in: kitty inxi: 3.3.35

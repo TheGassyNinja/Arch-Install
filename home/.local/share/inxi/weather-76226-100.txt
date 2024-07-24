@@ -1,0 +1,24 @@
+timestamp^^202407240940
+cloud_cover^^40
+city_id^^200
+latitude^^33.1062
+longitude^^-97.16
+observation_epoch^^1721832013
+relative_humidity^^80
+pressure_mb^^1020
+pressure_in^^34
+temp_c^^25.91
+temp_f^^79
+city^^Argyle
+country^^US
+country_iso3166^^US
+sunrise^^1721820996
+sunset^^1721871204
+visibility_km^^10
+visibility_mi^^6.21
+weather^^scattered clouds
+wind_degrees^^260
+wind_dir^^W
+wind_ms^^1.54
+wind_mph^^3.4
+api_source^^OpenWeatherMap.org

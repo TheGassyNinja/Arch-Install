@@ -1,19 +1,554 @@
-2024-04-17 20:44:18,225 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
-2024-05-19 19:21:53,066 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:21:56,040 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:09,050 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:14,206 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:15,080 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:15,295 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:15,908 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:16,554 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:17,130 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 19:22:50,489 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
-2024-05-19 19:26:32,135 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+
+2024-07-16 09:22:47,569 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-07-16 16:29:28,637 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 16:29:28,675 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 18:05:22,177 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:05:22,182 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:05:36,704 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-07-16 18:05:42,517 ERROR libqtile manager.py:load_config():L116 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 113, in load_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 134, in load
+    config = importlib.import_module(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:05:42,520 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:14:49,030 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:14:49,040 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:14:52,438 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:14:52,441 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:14:53,083 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:14:53,086 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:14:53,361 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:14:53,366 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:14:53,531 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:14:53,534 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:14:53,767 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:14:53,772 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:14:53,973 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:14:53,983 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:15:21,722 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:15:21,725 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:15:32,223 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:15:32,226 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:15:33,135 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:15:33,137 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:15:33,345 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:15:33,347 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:15:33,543 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:15:33,546 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:17:35,500 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:17:35,503 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:28:53,568 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 18:28:53,585 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 18:31:32,063 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 18:31:32,079 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 18:31:38,160 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 18:31:38,194 ERROR libqtile utils.py:import_class():L250 Unmet dependencies for 'libqtile.widget.pulse_volume.PulseVolume':
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 247, in import_class
+    module = importlib.import_module(module_path, __package__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/pulse_volume.py", line 23, in <module>
+    import pulsectl_asyncio
+ModuleNotFoundError: No module named 'pulsectl_asyncio'
+2024-07-16 18:44:57,910 ERROR libqtile core.py:_xpoll():L359 Got an exception in poll loop
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 334, in _xpoll
+    self.handle_event(event)
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 301, in handle_event
+    ret = target(event)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/window.py", line 1537, in handle_ButtonPress
+    self.process_button_click(e.event_x, e.event_y, e.detail)
+  File "/usr/lib/python3.12/site-packages/libqtile/bar.py", line 554, in process_button_click
+    widget.button_press(
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/volume.py", line 148, in button_press
+    base._TextBox.button_press(self, x, y, button)
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/base.py", line 296, in button_press
+    cmd()
+TypeError: 'bool' object is not callable
+2024-07-16 18:44:59,134 ERROR libqtile core.py:_xpoll():L359 Got an exception in poll loop
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 334, in _xpoll
+    self.handle_event(event)
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 301, in handle_event
+    ret = target(event)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/window.py", line 1537, in handle_ButtonPress
+    self.process_button_click(e.event_x, e.event_y, e.detail)
+  File "/usr/lib/python3.12/site-packages/libqtile/bar.py", line 554, in process_button_click
+    widget.button_press(
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/volume.py", line 148, in button_press
+    base._TextBox.button_press(self, x, y, button)
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/base.py", line 296, in button_press
+    cmd()
+TypeError: 'bool' object is not callable
+2024-07-16 18:45:10,398 ERROR libqtile core.py:_xpoll():L359 Got an exception in poll loop
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 334, in _xpoll
+    self.handle_event(event)
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 301, in handle_event
+    ret = target(event)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/window.py", line 1537, in handle_ButtonPress
+    self.process_button_click(e.event_x, e.event_y, e.detail)
+  File "/usr/lib/python3.12/site-packages/libqtile/bar.py", line 554, in process_button_click
+    widget.button_press(
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/volume.py", line 148, in button_press
+    base._TextBox.button_press(self, x, y, button)
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/base.py", line 296, in button_press
+    cmd()
+TypeError: 'bool' object is not callable
+2024-07-16 18:45:13,768 ERROR libqtile core.py:_xpoll():L359 Got an exception in poll loop
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 334, in _xpoll
+    self.handle_event(event)
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 301, in handle_event
+    ret = target(event)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/window.py", line 1537, in handle_ButtonPress
+    self.process_button_click(e.event_x, e.event_y, e.detail)
+  File "/usr/lib/python3.12/site-packages/libqtile/bar.py", line 554, in process_button_click
+    widget.button_press(
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/volume.py", line 148, in button_press
+    base._TextBox.button_press(self, x, y, button)
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/base.py", line 296, in button_press
+    cmd()
+TypeError: 'bool' object is not callable
+2024-07-16 18:45:15,638 ERROR libqtile core.py:_xpoll():L359 Got an exception in poll loop
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 334, in _xpoll
+    self.handle_event(event)
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 301, in handle_event
+    ret = target(event)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/window.py", line 1537, in handle_ButtonPress
+    self.process_button_click(e.event_x, e.event_y, e.detail)
+  File "/usr/lib/python3.12/site-packages/libqtile/bar.py", line 554, in process_button_click
+    widget.button_press(
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/volume.py", line 148, in button_press
+    base._TextBox.button_press(self, x, y, button)
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/base.py", line 296, in button_press
+    cmd()
+TypeError: 'bool' object is not callable
+2024-07-16 18:46:58,295 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:46:58,298 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-16 18:47:01,916 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 163, in <module>
+    widget.PulseVolumeExtra(),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'PulseVolume'?
+2024-07-16 18:47:01,918 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-17 12:48:27,504 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -23,16 +558,16 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:32,137 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:35,940 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 41
+    Scrn-shot = "escrotum $HOME/Screen-Shots/%Y-%m-%d-%H%M%s_%wx%h_escrotum.png"
+    ^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+2024-07-17 12:48:27,507 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-17 12:52:25,293 ERROR libqtile manager.py:reload_config():L290 Configuration error:
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -42,16 +577,133 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:35,941 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:40,968 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 41
+    Scrn-shot = "escrotum"
+    ^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+2024-07-17 12:52:25,294 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-18 03:33:25,530 ERROR libqtile manager.py:reload_config():L290 Configuration error:
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 152, in <module>
+    widget.CpuGraph(foreground=colors[3]),
+    ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/utils.py", line 274, in __getattr__
+    raise AttributeError
+AttributeError: . Did you mean: 'CPUGraph'?
+2024-07-18 03:33:25,535 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-18 20:51:20,643 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 151, in <module>
+    widget.MemoryGraph(foreground=colors[3], graph_color=colors[5], fill_color=colors[9], border_width=0),
+                                                                               ~~~~~~^^^
+IndexError: list index out of range
+2024-07-18 20:51:20,645 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-18 20:51:22,344 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 151, in <module>
+    widget.MemoryGraph(foreground=colors[3], graph_color=colors[5], fill_color=colors[9], border_width=0),
+                                                                               ~~~~~~^^^
+IndexError: list index out of range
+2024-07-18 20:51:22,345 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-18 20:51:22,896 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 151, in <module>
+    widget.MemoryGraph(foreground=colors[3], graph_color=colors[5], fill_color=colors[9], border_width=0),
+                                                                               ~~~~~~^^^
+IndexError: list index out of range
+2024-07-18 20:51:22,898 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-18 20:51:23,135 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 151, in <module>
+    widget.MemoryGraph(foreground=colors[3], graph_color=colors[5], fill_color=colors[9], border_width=0),
+                                                                               ~~~~~~^^^
+IndexError: list index out of range
+2024-07-18 20:51:23,136 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-18 20:51:23,295 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 151, in <module>
+    widget.MemoryGraph(foreground=colors[3], graph_color=colors[5], fill_color=colors[9], border_width=0),
+                                                                               ~~~~~~^^^
+IndexError: list index out of range
+2024-07-18 20:51:23,296 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-20 05:13:07,988 ERROR libqtile base.py:on_done():L848 poll() raised exceptions, not rescheduling
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/base.py", line 845, in on_done
+    result = future.result()
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/memory.py", line 92, in poll
+    return self.format.format(**val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'Mem_Percent'
+2024-07-20 05:13:07,989 WARNING libqtile base.py:on_done():L860 memory's poll() returned None, not rescheduling
+2024-07-20 06:23:02,379 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -61,16 +713,16 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:40,969 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:41,384 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 151
+    widget.Clock(format=" %H:%M", background=colors[1] foreground=colors[3], fontsize=30),
+                                             ^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2024-07-20 06:23:02,381 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-20 06:40:17,112 ERROR libqtile manager.py:reload_config():L290 Configuration error:
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -80,16 +732,84 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:41,384 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:41,613 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 141
+    widget.TextBox(text='   R', fontsize=12, foreground=colors[3] background=colors[5]),
+                                                        ^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2024-07-20 06:40:17,114 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-20 06:46:59,229 ERROR libqtile manager.py:reload_config():L290 Configuration error:
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 145, in <module>
+    widget.TextBox(text='', fontsize=42, foreground=colors[9]),
+                                                     ~~~~~~^^^
+IndexError: list index out of range
+2024-07-20 06:46:59,236 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-20 06:47:22,316 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 145, in <module>
+    widget.TextBox(text='', fontsize=42, foreground=colors[9]),
+                                                     ~~~~~~^^^
+IndexError: list index out of range
+2024-07-20 06:47:22,317 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-20 06:54:10,975 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 138, in <module>
+    widget.PulseVolume(foreground=colors[9], fontsize=20),
+                                  ~~~~~~^^^
+IndexError: list index out of range
+2024-07-20 06:54:10,977 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-20 07:01:58,659 ERROR libqtile core.py:_xpoll():L359 Got an exception in poll loop
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 334, in _xpoll
+    self.handle_event(event)
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 301, in handle_event
+    ret = target(event)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/window.py", line 1537, in handle_ButtonPress
+    self.process_button_click(e.event_x, e.event_y, e.detail)
+  File "/usr/lib/python3.12/site-packages/libqtile/bar.py", line 554, in process_button_click
+    widget.button_press(
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/volume.py", line 148, in button_press
+    base._TextBox.button_press(self, x, y, button)
+  File "/usr/lib/python3.12/site-packages/libqtile/widget/base.py", line 296, in button_press
+    cmd()
+TypeError: 'bool' object is not callable
+2024-07-20 12:54:42,029 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-07-21 17:43:58,434 ERROR libqtile manager.py:reload_config():L290 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -99,16 +819,16 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:41,614 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:41,795 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 144
+    widget.Spacer(length=10px),
+                          ^
+SyntaxError: invalid decimal literal
+2024-07-21 17:43:58,436 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-21 17:44:06,855 ERROR libqtile manager.py:reload_config():L290 Configuration error:
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 288, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -118,16 +838,624 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:41,796 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:45,690 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 144
+    widget.Spacer(length=10px),
+                          ^
+SyntaxError: invalid decimal literal
+2024-07-21 17:44:06,856 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-21 17:47:43,810 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-07-22 15:33:52,829 WARNING libqtile core.py:graceful_shutdown():L897 Server disconnected, couldn't close windows gracefully.
+2024-07-22 15:33:52,832 WARNING libqtile core.py:_xpoll():L355 Shutting down due to disconnection from X server
+2024-07-22 15:33:52,832 WARNING libqtile core.py:graceful_shutdown():L897 Server disconnected, couldn't close windows gracefully.
+2024-07-22 15:33:52,835 WARNING libqtile core.py:graceful_shutdown():L897 Server disconnected, couldn't close windows gracefully.
+2024-07-22 15:33:52,907 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-07-22 15:52:26,728 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 17:42:10,443 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:08:28,052 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:09:06,209 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:09:36,943 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:09:44,267 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:10:24,927 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:10:33,027 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:10:58,087 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:11:01,036 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:11:07,849 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:11:49,214 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:13:39,844 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:13:49,360 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:13:56,989 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:14:05,501 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:14:17,546 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 18:16:35,054 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:15:03,524 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:15:28,392 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:23:17,033 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:23:48,964 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:24:33,395 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:25:04,746 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:26:32,232 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:27:06,825 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:28:00,474 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:28:25,864 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:28:52,627 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:29:15,440 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:31:00,464 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:33:02,093 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:33:26,360 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:33:42,768 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:36:03,904 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:36:13,978 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:40:04,472 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:41:03,639 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:41:26,261 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:42:23,352 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:43:59,858 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:47:33,231 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:48:49,129 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:49:09,198 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:49:45,603 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:50:24,918 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:50:57,897 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:52:13,497 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:53:41,148 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:54:05,480 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:54:31,148 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:54:53,056 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:55:16,141 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:55:28,879 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:55:40,781 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 20:55:49,922 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:11:19,421 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:11:29,777 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:12:00,573 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:12:26,993 ERROR libqtile manager.py:reload_config():L291 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 289, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 138, in <module>
+    widget.TextBox(text='  ', fontsize=34, foreground=colors[0], background=colors[9]),
+                                                                              ~~~~~~^^^
+IndexError: list index out of range
+2024-07-22 21:12:26,999 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-22 21:12:28,835 ERROR libqtile manager.py:reload_config():L291 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 289, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
+    config = importlib.reload(sys.modules[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 866, in _exec
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/thegassyninja/.config/qtile/config.py", line 138, in <module>
+    widget.TextBox(text='  ', fontsize=34, foreground=colors[0], background=colors[9]),
+                                                                              ~~~~~~^^^
+IndexError: list index out of range
+2024-07-22 21:12:28,838 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-22 21:12:40,668 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:13:02,028 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:13:24,356 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:14:21,194 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:15:13,542 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:22:51,060 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:23:18,862 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:24:05,659 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:25:55,690 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:26:15,781 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:27:39,018 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:32:48,477 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:34:39,813 ERROR libqtile manager.py:reload_config():L291 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 289, in reload_config
+    self.config.load()
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -137,16 +1465,16 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:45,691 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:46,312 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 137
+    widget.WindowName(parse_text="def my_func(text) for string in [" - Chromium", " - Firefox"]: text = text.replace(string, "") return textthen set option parse_text=my_func", foreground=colors[1]),
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2024-07-22 21:34:39,814 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-22 21:34:44,436 ERROR libqtile manager.py:reload_config():L291 Configuration error:
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 289, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
@@ -156,176 +1484,370 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 1129, in get_code
   File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:46,313 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:46,603 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 137
+    widget.WindowName(parse_text="def my_func(text) for string in [" - Chromium", " - Firefox"]: text = text.replace(string, "") return textthen set option parse_text=my_func", foreground=colors[1]),
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2024-07-22 21:34:44,438 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-22 21:34:58,785 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:35:52,321 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:36:06,127 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:36:31,095 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:39:50,818 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:43:11,542 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 21:57:51,357 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 22:09:54,872 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 22:30:18,317 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 22:57:16,299 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 22:57:47,830 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-22 22:57:55,690 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 13:12:42,591 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 13:13:35,029 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 14:23:31,606 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 14:24:48,193 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 14:25:12,372 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:01:17,698 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:06:35,097 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:08:39,980 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:09:02,766 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:09:16,931 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:09:28,354 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:09:29,890 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:10:05,820 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:10:50,545 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:11:09,124 ERROR libqtile manager.py:reload_config():L291 Configuration error:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 289, in reload_config
     self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
+  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 132, in load
     config = importlib.reload(sys.modules[name])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
     _bootstrap._exec(spec, module)
   File "<frozen importlib._bootstrap>", line 866, in _exec
-  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:46,604 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:46,794 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/home/thegassyninja/.config/qtile/config.py", line 150, in <module>
+    widget.Clock(format=" %H:%M ", background=colors[0], foreground=colors[12], fontsize=36),
+                                                                    ~~~~~~^^^^
+IndexError: list index out of range
+2024-07-23 17:11:09,126 WARNING libqtile utils.py:send_notification():L297 dbus-next is not installed. Unable to send notifications.
+2024-07-23 17:11:27,052 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
-    self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
-    config = importlib.reload(sys.modules[name])
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
-    _bootstrap._exec(spec, module)
-  File "<frozen importlib._bootstrap>", line 866, in _exec
-  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:46,795 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:46,983 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:14:19,524 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
-    self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
-    config = importlib.reload(sys.modules[name])
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
-    _bootstrap._exec(spec, module)
-  File "<frozen importlib._bootstrap>", line 866, in _exec
-  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:46,984 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:26:55,601 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:15:28,827 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
-    self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
-    config = importlib.reload(sys.modules[name])
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
-    _bootstrap._exec(spec, module)
-  File "<frozen importlib._bootstrap>", line 866, in _exec
-  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:26:55,602 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:27:00,092 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:15:38,693 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
-    self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
-    config = importlib.reload(sys.modules[name])
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
-    _bootstrap._exec(spec, module)
-  File "<frozen importlib._bootstrap>", line 866, in _exec
-  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:27:00,093 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:27:00,657 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 17:16:04,630 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
-    self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
-    config = importlib.reload(sys.modules[name])
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
-    _bootstrap._exec(spec, module)
-  File "<frozen importlib._bootstrap>", line 866, in _exec
-  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:27:00,658 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 19:27:00,892 ERROR libqtile manager.py:reload_config():L285 Configuration error:
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:51:28,565 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 283, in reload_config
-    self.config.load()
-  File "/usr/lib/python3.12/site-packages/libqtile/confreader.py", line 130, in load
-    config = importlib.reload(sys.modules[name])
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/importlib/__init__.py", line 131, in reload
-    _bootstrap._exec(spec, module)
-  File "<frozen importlib._bootstrap>", line 866, in _exec
-  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/thegassyninja/.config/qtile/config.py", line 131
-    ),
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 121
-2024-05-19 19:27:00,893 WARNING libqtile utils.py:send_notification():L298 dbus-next is not installed. Unable to send notifications.
-2024-05-19 21:13:28,205 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
-2024-05-19 21:13:28,218 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
-2024-05-19 21:22:32,450 WARNING libqtile manager.py:grab_key():L481 Key spec duplicated, overriding previous: <Key (['mod4'], r)>
-2024-05-19 21:22:57,269 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 21:23:07,628 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 21:23:08,906 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 21:23:13,576 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 21:24:41,322 ERROR libqtile manager.py:spawncmd():L1605 No widget named 'prompt' present.
-2024-05-19 22:20:27,567 ERROR libqtile manager.py:spawn():L1262 couldn't find `tdrop`
-2024-05-21 19:19:40,146 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
-2024-05-21 19:19:40,161 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
-2024-05-22 13:25:26,639 ERROR libqtile loop.py:_handle_exception():L62 Exception in event loop:
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:51:57,924 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
 Traceback (most recent call last):
-  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
-    self._context.run(self._callback, *self._args)
-  File "/usr/lib/python3.12/site-packages/libqtile/core/manager.py", line 944, in f
-    self.core.flush()
-  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/core.py", line 898, in flush
-    self.conn.flush()
-  File "/usr/lib/python3.12/site-packages/libqtile/backend/x11/xcbq.py", line 613, in flush
-    return self.conn.flush()
-           ^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/site-packages/xcffib/__init__.py", line 581, in wrapper
-    self.invalid()
-  File "/usr/lib/python3.12/site-packages/xcffib/__init__.py", line 567, in invalid
-    raise ConnectionException(err)
-xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
-2024-05-22 13:25:26,642 WARNING libqtile core.py:_xpoll():L368 Shutting down due to disconnection from X server
-2024-05-22 13:25:26,642 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
-2024-05-22 13:25:26,643 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
-2024-05-22 13:25:26,643 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
-2024-05-22 13:25:26,643 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
-2024-05-22 13:25:26,647 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
-2024-05-24 06:31:23,146 WARNING libqtile core.py:graceful_shutdown():L910 Server disconnected, couldn't close windows gracefully.
-2024-05-24 06:31:23,215 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:52:09,296 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:52:39,882 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:52:56,149 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:53:38,534 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:55:08,934 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:55:40,694 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 19:57:33,106 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 20:04:31,053 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 20:20:07,799 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-23 20:20:29,342 ERROR libqtile hook.py:fire():L193 Error in hook client_killed
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.12/site-packages/libqtile/dgroups.py", line 256, in _del
+    if group.persist:
+       ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'persist'
+2024-07-24 11:34:36,377 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate

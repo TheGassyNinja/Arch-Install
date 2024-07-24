@@ -27,9 +27,10 @@ country=$(echo "$response" | jq -r '.sys.country')
 temp=$(echo "$response" | jq -r '.main.temp')
 weather=$(echo "$response" | jq -r '.weather[0].description')
 
-file="/home/thegassyninja/.local/bin/Crons/weather.txt"
+output="/home/thegassyninja/.local/tmp/weather.txt"
 
-echo "Weather in ${city}, ${country}:" > $file
-echo "Temperature: ${temp}°F" >> $file
-echo "Conditions: ${weather}" >> $file
-echo "Last updated: $(date)" >> $file
+echo "Last updated: $(date)" > $output
+echo "" >> $output
+echo "Weather in ${city}, ${country}:" >> $output
+echo "Temperature: ${temp}°F" >> $output
+echo "Conditions: ${weather}" >> $output

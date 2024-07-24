@@ -1,0 +1,2 @@
+Root: /dev/sda2       937G  9.9G  880G   2% /
+Mnt(s): /dev/sdb1       916G   51G  820G   6% /home/thegassyninja/mnt/USB

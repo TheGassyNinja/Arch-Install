@@ -1,0 +1,4 @@
+
+Error spawning command line “dbus-launch --autolaunch=9c3dce6fe5fc49a69d451dd89122db79 --binary-syntax --close-stderr”: Child process exited with code 1
+Error spawning command line “dbus-launch --autolaunch=9c3dce6fe5fc49a69d451dd89122db79 --binary-syntax --close-stderr”: Child process exited with code 1
+==> ERROR: Cannot fetch updates

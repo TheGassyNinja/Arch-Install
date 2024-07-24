@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Gather info from tmp files and print to stdout in a nice format
+# This will also generate a txt file with the same info in an easly grepable format.
+
+#VARS
+TMPDIR="$HOME/.local/tmp"
+output="$TMPDIR/status.txt"
+
+
+
+
+# test echo contents of weather.txt in TMPDIR
+cat $TMPDIR/weather.txt > $output
+echo -e "\n" >> $output
+echo "-----------------------------------" >> $output
+echo -e "\n" >> $output
+cat $TMPDIR/updates.txt >> $output
+echo -e "\n" >> $output
+echo "-----------------------------------" >> $output
+echo -e "\n" >> $output
+cat $TMPDIR/drive-space.txt >> $output
+

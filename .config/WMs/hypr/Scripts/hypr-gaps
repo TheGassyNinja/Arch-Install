@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Define the profiles
+profiles=(
+    "general:gaps_out=0; general:gaps_in=0;"
+    "general:gaps_out=5; general:gaps_in=7;"
+    "general:gaps_out=5; general:gaps_in=20;"
+    "general:gaps_out=15; general:gaps_in=20;"
+    "general:gaps_out=15; general:gaps_in=25;"
+    "general:gaps_out=15; general:gaps_in=30;"
+    "general:gaps_out=20; general:gaps_in=30;"
+)
+
+# File to store the current profile index
+index_file="$HOME/.config/hypr/Scripts/.current_profile"
+
+# Function to apply a profile using hyprctl
+apply_profile() {
+    local profile=$1
+    echo "$profile" | xargs -n 1 hyprctl --batch keyword
+    echo "Applied profile: $profile"
+}
+
+# Read the current profile index, default to 0 if the file doesn't exist
+if [[ -f "$index_file" ]]; then
+    current_index=$(cat "$index_file")
+else
+    current_index=0
+fi
+
+# Increment the profile index and wrap around if needed
+next_index=$(( (current_index + 1) % ${#profiles[@]} ))
+
+# Apply the next profile
+apply_profile "${profiles[$next_index]}"
+
+# Save the new profile index
+echo $next_index > "$index_file"

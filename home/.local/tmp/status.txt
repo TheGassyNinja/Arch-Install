@@ -1,0 +1,19 @@
+Last updated: Wed Jul 24 06:20:00 PM CDT 2024
+
+Weather in Argyle, US:
+Temperature: 90.77°F
+Conditions: clear sky
+
+
+-----------------------------------
+
+
+Pacman: 29
+Last updated: 18:00:00 07/24
+
+
+-----------------------------------
+
+
+Root: /dev/sda2       937G  9.9G  880G   2% /
+Mnt(s): /dev/sdb1       916G   51G  820G   6% /home/thegassyninja/mnt/USB
